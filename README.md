@@ -81,3 +81,6 @@ python SegTest.py --name project_name \
 ```
 This script evaluates the accuracy for all saved models in the folder `outputs/project_name` with `valConc`. When the option of `--epoch 100`, then 100th saved model is called and m-IoU is assessed. Also, adding `--phase test`, the accuracy of m-IoU and F1 is evaluated by `testConc`
 
+
+## Changelog
+* 08/04/2024: Updated by author
