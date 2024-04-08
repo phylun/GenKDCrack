@@ -40,8 +40,11 @@ git clone https://github.com//phylun/GenKDCrack.git
 Download the sample dataset via the link ([Link](https://drive.google.com/file/d/1f6kgHManFRST8NMJGyrrlsTls304V6in/view?usp=sharing)). Unzip it into the folder `dataset_sample`
 
 ```
-dataset_sample/labeled/trainConc
-                      /valConc
-                      /testConc
-              /unlabeled/trainConc
+dataset_sample/labeled/trainConc/JPEGImages
+                                /SegmentationClass
+                      /valConc/JPEGImages
+                              /SegmentationClass
+                      /testConc/JPEGImages
+                               /SegmentationClass
+              /unlabeled/trainConc/JPEGImages
 ```
