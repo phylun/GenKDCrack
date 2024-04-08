@@ -13,7 +13,7 @@ This codes are inspired by Jun-Yan Zhu*, Taesung Park*, Phillip Isola, and Alexe
 The full dataset is provided by Bianchi, Eric; Hebdon, Matthew (2021). Concrete Crack Conglomerate Dataset. University Libraries, Virginia Tech. Dataset. This dataset can be download at ([Link](https://data.lib.vt.edu/articles/dataset/Concrete_Crack_Conglomerate_Dataset/16625056)). This code has been implemented to operate using sample data. 
 
 
-Please cite our paper if you find it useful for your research.
+Please cite this paper if the code helps your research.
 ```
 @article{Shim_CACAIE_2023,
   title={Self-training approach for crack detection using synthesized crack images based on conditional generative adversarial network},
