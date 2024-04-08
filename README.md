@@ -48,3 +48,6 @@ dataset_sample/labeled/trainConc/JPEGImages
                                /SegmentationClass
               /unlabeled/trainConc/JPEGImages
 ```
+
+## Pre-trained model for knowledge distillation
+This code needs pre-trained weight models for teacher networks. The teacher networks are FRRNA and FRRNB whose weights can be downloaded via ([Link](https://drive.google.com/file/d/11-nly73F10iI0xmNiCIoouDPgUt7PX6o/view?usp=sharing)) and ([Link](https://drive.google.com/file/d/1ARZ4W95gH0F212TKg260yiYqS3pdy-uo/view?usp=sharing)), respectively. Move them in the folder `pretrained`
