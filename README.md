@@ -1,6 +1,6 @@
 # Semantic segmentation using generative knowledge distillation for crack detection
 
-This codes are inspired by Jun-Yan Zhu*, Taesung Park*, Phillip Isola, and Alexei A. Efros. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", in IEEE International Conference on Computer Vision (ICCV), 2017. In particular, 'option' based implementation is heavily borrowed from ([Link](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/tree/master/options)).
+This codes are inspired by Jun-Yan Zhu*, Taesung Park*, Phillip Isola, and Alexei A. Efros. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", in IEEE International Conference on Computer Vision (ICCV), 2017. In particular, 'option' based implementation is heavily borrowed from their code ([Link](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/tree/master/options)).
 
 
 Please cite our paper if you find it useful for your research.
