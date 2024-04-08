@@ -83,4 +83,4 @@ This script evaluates the accuracy for all saved models in the folder `outputs/p
 
 
 ## Changelog
-* 08/04/2024: Updated by author
+* April 08th, 2024: Updated by author
