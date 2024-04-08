@@ -38,7 +38,6 @@ git clone https://github.com//phylun/GenKDCrack.git
 
 ## Download dataset
 Download the sample dataset via the link ([Link](https://drive.google.com/file/d/1f6kgHManFRST8NMJGyrrlsTls304V6in/view?usp=sharing)). Unzip it into the folder `dataset_sample`
-
 ```
 dataset_sample/labeled/trainConc/JPEGImages
                                 /SegmentationClass
@@ -51,3 +50,31 @@ dataset_sample/labeled/trainConc/JPEGImages
 
 ## Pre-trained model for knowledge distillation
 This code needs pre-trained weight models for teacher networks. The teacher networks are FRRNA and FRRNB whose weights can be downloaded via ([Link](https://drive.google.com/file/d/11-nly73F10iI0xmNiCIoouDPgUt7PX6o/view?usp=sharing)) and ([Link](https://drive.google.com/file/d/1ARZ4W95gH0F212TKg260yiYqS3pdy-uo/view?usp=sharing)), respectively. Move them in the folder `pretrained`
+
+
+## Training on sample dataset
+```
+python EnsemKD_SegTrain.py --name project_name \
+                           --Snet RegSeg \
+                           --n_epoch 3000 \
+                           --consist_weight 0.001 \
+                           --gpu_ids 0
+```
+
+Use your own project name (e.g. KDEnsem_FRRNAB_RegSeg). Snet means segmenation model. In this code, eight models are provided such as CGNet, FDDWNet, ERFNet, DDRNet, RegSeg, PIDNet, Deeplabv3p, and LEDNet. 
+
+In case of supervised learning, use the below script
+```
+python Super_SegTrain.py --name project_name \
+                         --Snet RegSeg \
+                         --gpu_ids 0
+```
+
+## Evaluate the segmentation model on sample dataset
+```
+python SegTest.py --name project_name \
+                  --Snet RegSeg \
+                  --gpu_ids 0
+```
+This script evaluates the accuracy for all saved models in the folder `outputs/project_name`. When the option of `--epoch 100`, then 100th saved model is called and m-IoU is assessed. Also, adding `--phase test`, 
+
