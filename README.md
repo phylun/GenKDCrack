@@ -6,7 +6,7 @@ This repo is the pytorch implementation of the following paper:
 The detailed paper will be updated when the publication is completed.
 The most highlight of this proposed method is to improve m-IoU and F1 without any additional crack image. The generated knowledge plays a role of a new crack image. This knowledge is transferred to crack detection newtork, then the accuracy is increased regrardless of newtork architecture.
 
-![](figs/semi_overview.jpg)
+![](fig/fig_overview.jpg)
 
 This codes are inspired by Jun-Yan Zhu*, Taesung Park*, Phillip Isola, and Alexei A. Efros. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks", in IEEE International Conference on Computer Vision (ICCV), 2017. In particular, 'option' based implementation is heavily borrowed from their code ([Link](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/tree/master/options)).
 
