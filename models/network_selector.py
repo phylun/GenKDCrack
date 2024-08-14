@@ -7,7 +7,14 @@ from models.DDRNet_39 import DualResNet_imagenet
 from models.RegSeg import RegSeg
 from models.pidnet import PIDNet
 from models.deeplabv3p import DeepLabv3_plus
+from semseg.models.segformer import SegFormer
+from semseg.models.convnext import Convnext
+from semseg.models.lawin import Lawin
+from semseg.models.poolformer import Poolformer
 
+'''
+# This SegFormer, Convnext, lawin, poolformer models were implemented by https://github.com/sithu31296/semantic-segmentation
+'''
 
 def network_selection(opt, sel_net=0):
     
@@ -43,6 +50,26 @@ def network_selection(opt, sel_net=0):
         model = PIDNet(m=3, n=4, num_classes=opt.output_nc, planes=64, ppm_planes=112, head_planes=256, augment=False)                
     elif NetName == 'Deeplabv3p':
         model = DeepLabv3_plus(nInputChannels=opt.input_nc, n_classes=opt.output_nc, os=16, pretrained=False, _print=True)
+    elif NetName == 'SegformerB0':
+        model = SegFormer('MiT-B0', num_classes=opt.output_nc)    
+    elif NetName == 'SegformerB1':
+        model = SegFormer('MiT-B1', num_classes=opt.output_nc)    
+    elif NetName == 'ConvnextB':
+        model = Convnext('B', num_classes=opt.output_nc)
+    elif NetName == 'ConvnextT':
+        model = Convnext('T', num_classes=opt.output_nc)
+    elif NetName == 'ConvnextS':
+        model = Convnext('S', num_classes=opt.output_nc)
+    elif NetName == 'PoolformerS24':
+        model = Poolformer('S24', num_classes=opt.output_nc)
+    elif NetName == 'PoolformerS36':
+        model = Poolformer('S36', num_classes=opt.output_nc)
+    elif NetName == 'PoolformerM36':
+        model = Poolformer('M36', num_classes=opt.output_nc)
+    elif NetName == 'LawinB0':
+        model = Lawin('MiT-B0', num_classes=opt.output_nc)
+    elif NetName == 'LawinB1':
+        model = Lawin('MiT-B1', num_classes=opt.output_nc)        
     else:
         raise NotImplementedError('Generator model name [%s] is not recognized' % NetName)
     
