@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 import numpy as np
 import torch.nn.functional as F
-
+from termcolor import cprint
+import random
 from torch.autograd import Variable
 
 
@@ -827,6 +828,7 @@ def get_interp_size(input, s_factor=1, z_factor=1):  # for caffe
     resize_shape = (int(ori_h), int(ori_w))
     return resize_shape
 
+    
 
 def interp(input, output_size, mode="bilinear"):
     n, c, ih, iw = input.shape
@@ -860,6 +862,6 @@ def get_upsampling_weight(in_channels, out_channels, kernel_size):
     weight[range(in_channels), range(out_channels), :, :] = filt
     return torch.from_numpy(weight).float()
 
-
-                
         
+        
+    

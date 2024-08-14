@@ -103,7 +103,6 @@ def mkdir(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-
 def GetPallete(choice, cls_img, w, h):
     if choice == 1:
         b = np.float32(np.where(cls_img > 127, 255, 0))
@@ -131,6 +130,8 @@ def GetPallete(choice, cls_img, w, h):
     return pallete
 
 
+
+
 def print_train_multi_log(iteration, print_epochs, info_list):
     if iteration % print_epochs == 0:
         # cprint('Time:{}||Epoch:{}||EpochIter:{}/{}||Iter:{}||Loss:{:.4f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
@@ -138,19 +139,19 @@ def print_train_multi_log(iteration, print_epochs, info_list):
 
 def print_train_log(iteration, print_epochs, info_list):
     if iteration % print_epochs == 0:
-        cprint('Time:{}||EpochIter:{}/{}||Loss(Seg):{:.4f}||Loss(S_Const):{:.6f}||Loss(U_Const):{:.6f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
+        cprint('Time:{}||Epoch:{}||EpochIter:{}/{}||Iter:{}||Loss:{:.4f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
+        
+def print_GenImage_train_log(iteration, print_epochs, info_list):
+    if iteration % print_epochs == 0:
+        cprint('Time:{}||EpochIter:{}/{}||D_fake_Loss:{:.4f}|| D_real_Loss:{:.4f}||G_fake_Loss:{:.4f}||G_L1_Loss:{:.4f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
+
 
 def print_super_train_log(iteration, print_epochs, info_list):
     if iteration % print_epochs == 0:
         cprint('Time:{}||Epoch:{}||EpochIter:{}/{}||Iter:{}||Loss:{:.4f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
-
-        # print_train_log(i, 5, [time.ctime(), i_iter % 500, loss_sup.item(), loss_sup_r.item(), cps_loss.item(), load_t1 - load_t0])
-        
-def print_train_dual_cps_log(iteration, print_epochs, info_list):
-    if iteration % print_epochs == 0:
-        cprint('Time:{}||Model:{}||EpochIter:{}/{}||Loss(Up-Left):{:.4f}||Loss(Up-Right):{:.4f}||Loss(S-Left):{:.4f}||Loss(S-Right):{:.4f}||Loss(CPS):{:.4f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
         
 def print_train_KD_log(iteration, print_epochs, info_list):
     if iteration % print_epochs == 0:
         # cprint('Time:{}||EpochIter:{}/{}||Loss(Left):{:.4f}||Loss(Right):{:.4f}||Loss(CPS):{:.4f}||Loss(Self):{:.4f}||Batch_Time:{:.4f}'.format(*info_list), 'green')
-        cprint('Time:{}||EpochIter:{}/{}||Loss(Student):{:.4f}||Loss(Const):{:.7f}||Batch_Time:{:.2f}'.format(*info_list), 'green')
+        cprint('Time:{}||ProjName:{:s}||EpochIter:{}/{}||Loss(Student):{:.4f}||Loss(Const):{:.7f}||Batch_Time:{:.2f}'.format(*info_list), 'green')
+                
