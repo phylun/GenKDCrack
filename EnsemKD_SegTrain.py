@@ -163,7 +163,7 @@ for i_iter in range(opt.n_epoch):
 
 
         load_t1 = time.time()
-        print_train_KD_log(i, 5, [time.ctime(), i_iter, opt.n_epoch, S_s_loss.item(), u_consist_loss.item(), load_t1 - load_t0])        
+        print_train_KD_log(i, 5, [time.ctime(), opt.name, i_iter+1, opt.n_epoch, S_s_loss.item(), u_consist_loss.item(), load_t1 - load_t0])
 
     
     avg_loss_S_seg = np.array(avg_loss_S_seg)
