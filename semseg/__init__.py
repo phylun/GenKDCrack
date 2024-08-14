@@ -1,6 +1,6 @@
 from tabulate import tabulate
 from semseg import models
-from semseg import datasets
+# from semseg import datasets
 from semseg.models import backbones, heads
 
 
@@ -27,7 +27,7 @@ def show_heads():
     print(tabulate({'No.': numbers, 'Heads': head_names}, headers='keys'))
 
 
-def show_datasets():
-    dataset_names = datasets.__all__
-    numbers = list(range(1, len(dataset_names)+1))
-    print(tabulate({'No.': numbers, 'Datasets': dataset_names}, headers='keys'))
+# def show_datasets():
+#     dataset_names = datasets.__all__
+#     numbers = list(range(1, len(dataset_names)+1))
+#     print(tabulate({'No.': numbers, 'Datasets': dataset_names}, headers='keys'))
