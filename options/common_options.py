@@ -10,6 +10,8 @@ https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/tree/master/options
 import argparse
 import os,sys
 import torch
+import random
+import numpy as np
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils import util
@@ -18,6 +20,19 @@ class CommonOptions():
 
     def __init__(self) :
         self.initialized = False
+        self.initialized = False
+        seednum=1234        
+        torch.manual_seed(seednum)
+        random.seed(seednum)
+        np.random.seed(seednum)
+            
+        # GPU 사용 시에도 시드 설정
+        torch.cuda.manual_seed(seednum)
+        torch.cuda.manual_seed_all(seednum)
+        
+        # CuDNN
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
 
 
     def initialize(self, parser):
