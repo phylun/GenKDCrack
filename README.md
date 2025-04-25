@@ -15,15 +15,14 @@ The full dataset is provided by Bianchi, Eric; Hebdon, Matthew (2021). Concrete 
 
 Please cite this paper if the code helps your research.
 ```
-@article{Shim_CACAIE_2023,
-  title={Self-training approach for crack detection using synthesized crack images based on conditional generative adversarial network},
+@article{Shim_AUTCON_2025,
+  title={Semantic segmentation for crack detection via generative knowledge distillation},
   author={Shim, Seungbo},
-  journal={Computer-Aided Civil and Infrastructure Engineering},
-  volume={39},
-  number={7},
-  pages={1019--1041},
-  year={2024},
-  publisher={Wiley Online Library}
+  journal={Automation in Construction},
+  volume={175},
+  pages={106201},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
 
